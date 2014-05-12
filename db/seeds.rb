@@ -1,433 +1,343 @@
-# no edits made to this page yet
+Card.create({
+  username: 'andrewdestefano'
+  description: 'Andrew'
+  photo:'http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/10251305_663584127053607_1767372524_n.jpg'
+  gender_male: true
+  clothing_hat: true
+  clothing_hat_beanie: true
+  clothing_style_camo: true
+  clothing_type_jacket: true
+  accessory_eyewear: true
+  accessory_eyewear_sunglasses: true
+  hair_facial: true
+  hair_facial_beard: true
+  face_action_mouth_closed: true
+  jewelry: true
+  jewelry_finger: true
+  jewelry_finger_ring: true
+  hand_holding_object: true
+  hand_holding_object_phone: true
+  brown_hair: true
+})
 
-
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'andrewdestefano',
-  'Andrew',
-  'http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/10251305_663584127053607_1767372524_n.jpg',
-  true,
-  true,
-  true,
-
-  true,
-  true,
-  false,
+Card.create({
+  username: 'ashelinikol'
+  description: 'Asheli'
+  photo:'http://distilleryimage6.ak.instagram.com/5ac8601e8bdf11e2ab6822000a1fb191_7.jpg'
+  gender_female: true
+  accessory_eyewear: true
+  accessory_eyewear_glasses: true
+  hair_color_black: true
+  hair_type_curly: true
+  jewelry: true
+  jewelry_piercing_ear: true
+  face_action_mouth_smile: true
+  clothing_style_leopard: true
+  location_outdoors: true
+  eye_color_brown: true
+  hair_length_short: true
   
-  true,
-  false,
-  false,
+})
 
-  'brown',
-  'none'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'ashelinikol',
-  'Asheli',
-  'http://distilleryimage6.ak.instagram.com/5ac8601e8bdf11e2ab6822000a1fb191_7.jpg',
+Card.create({
+  username: 'wandrlust24'
+  description: 'Novella'
+  photo: 'http://photos-b.ak.instagram.com/hphotos-ak-prn/10009775_390616587747361_1555779316_n.jpg'
+  gender_female: true
+  hair_color_brunette: true
+  hair_type_curly: true
+  eye_color_green: true
+  face_action_mouth_smile: true
+  jewelry_piercing_ear: true
+  clothing_color_black: true
+  location_indoors: true
+  hair_length_long: true
   
-  false,
-  true,
-  false,
-
-  false,
-  false,
-  false,
   
-  true,
-  true,
-  false,
+})
 
-  'brown',
-  'brown'
-);
+Card.create({
 
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'wandrlust24',
-  'Novella',
-  'http://photos-b.ak.instagram.com/hphotos-ak-prn/10009775_390616587747361_1555779316_n.jpg',
+  username: 'nickybcool'
+  description: 'Nick'
+  photo: 'http://distilleryimage2.ak.instagram.com/9be211ee910711e2bd8822000a9d0df8_7.jpg'
+  gender_male: true
+  clothing_hat: true
+  hair_color_brunette: true
+  eye_color_brown: true
+  location_indoors: true
+})
+
+Card.create({
+  username: 'lizrock667'
+  description: 'Liz'
+  photo: 'http://distilleryimage7.ak.instagram.com/ccb327ec6c7f11e2bbe622000a9f1270_7.jpg'
+  gender_female: true
+  hair_color_brunette: true
+  hair_type_curly: true
+  eye_color_brown: true
+  makeup_lipstick: true
+  makeup_lipstick_red: true
+  makeup_eye_mascara: true
+  makeup_eye_liner: true
+  clothing_type_tank_top: true
+  location_indoors: true
+  face_action_mouth_smile: true
+  hair_length_long: true
   
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
   
-  true,
-  true,
-  false,
+})
 
-  'brown',
-  'green'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'nickybcool',
-  'Nick',
-  'http://distilleryimage2.ak.instagram.com/9be211ee910711e2bd8822000a9d0df8_7.jpg',
+Card.create({
+  username'agaalina'
+  description'Agata'
+  photo 'http://photos-d.ak.instagram.com/hphotos-ak-prn/1389671_251992551632283_593105063_n.jpg'
+  gender_female: true
+  eye_color_blue: true
+  clothing_hat: true
+  clothing_hat_beanie: true
+  clothing_type_hood: true
+  clothing_type_jacket: true
+  face_action_mouth_smile: true
+  accessory_neck_scarf: true
+  face_mole: true
+  clothing_color_blue: true
   
-  true,
-  false,
-  true,
+})
 
-  true,
-  true,
-  false,
+Card.create({
+  username: 'iamdorito'
+  description: 'Dorothy'
+  photo: 'http://distilleryimage7.ak.instagram.com/6d425fb0a08411e2a58222000a1fb810_7.jpg'
+  gender_female: true
+  hair_color_black: true
+  hair_length_short: true
+  accessory_eyewear_glasses: true
+  hair_facial_mustache: true
+  hair_facial_mustache_handlebar: true
+  hand_holding_object_phone: true
+  hand_holding_object: true
+  jewelry_arm_watch: true
+  face_action_mouth_open: true
+  eye_color_brown: true
+  jewelry_piercing_ear: true
+  jewelry: true
+  jewelry_piercing: true
+  clothing_type_tank_top: true
+  clothing_color_yellow: true
+  location_indoors: true
+  hair_type_straight: true
   
-  false,
-  false,
-  false,
-
-  'brown',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'lizrock667',
-  'Liz',
-  'http://distilleryimage7.ak.instagram.com/ccb327ec6c7f11e2bbe622000a9f1270_7.jpg',
   
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
   
-  false,
-  false,
-  false,
+})
 
-  'brown',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'agaalina',
-  'Agata',
-  'http://photos-d.ak.instagram.com/hphotos-ak-prn/1389671_251992551632283_593105063_n.jpg',
+Card.create({
+  username: 'theee_bast'
+  description: 'Kristine'
+  photo: 'http://distilleryimage7.ak.instagram.com/8141f0a00d8811e2968922000a1cdbb3_7.jpg'
+  gender_female: true
+  eye_color_brown: true
+  hair_color_blonde: true
+  jewelry_piercing_ear: true
+  jewelry: true
+  jewelry_piercing: true
+  accessory_eyewear_glasses: true
+  accessory_eyewear: true
+  face_action_mouth_smile: true
+  location_in_car: true
+  hair_length_long: true
+  hair_type_straight: true
   
-  false,
-  false,
-  true,
-
-  false,
-  false,
-  false,
   
-  false,
-  false,
-  false,
+})
 
-  'none',
-  'blue'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'iamdorito',
-  'Dorothy',
-  'http://distilleryimage7.ak.instagram.com/6d425fb0a08411e2a58222000a1fb810_7.jpg',
+Card.create ({
+  username: 'beffermy'
+  description: 'Beth'
+  photo: 'http://distilleryimage4.ak.instagram.com/400930d4c03411e394610002c9dd4424_8.jpg'
+  gender_female: true
+  hair_length_long: true
+  hair_type_curly: true
+  eye_color_hazel: true
+  hair_color_brunette: true
+  clothing_style_denim: true
+  accessory_bag: true
+  location_indoors: true
+  clothing_color_blue: true
   
-  false,
-  true,
-  false,
+})
 
-  true,
-  false,
-  true,
+Card.create ({
+  username:'jennisaredhead'
+  description: 'Jenny'
+  photo: 'http://photos-g.ak.instagram.com/hphotos-ak-prn/1168973_177262915802102_1978511720_n.jpg'
+  gender_female: true
+  hair_type_wavey: true
+  hair_color_red: true
+  eye_color_green: true
+  face_action_eye_looking_off: true
+  clothing_type_tank_top: true
+  clothing_color_black: true
+  location_indoors: true
+  jewelry_piercing_ear: true
+  jewelry: true
+  jewelry_piercing: true
+  hair_length_long: true
   
-  true,
-  true,
-  false,
+})
 
-  'black',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'theee_bast',
-  'Kristine',
-  'http://distilleryimage7.ak.instagram.com/8141f0a00d8811e2968922000a1cdbb3_7.jpg',
-
-  false,
-  true,
-  false,
-
-  false,
-  false,
-  false,
+Card.create({
+  username: '1dcash1'
+  description: 'Daryl'
+  photo: 'http://distilleryimage2.ak.instagram.com/90a239b4d5cb11e1ad6922000a1e8b8a_7.jpg'
+  gender_male: true
+  clothing_color_blue: true
+  accessory_neck_tie: true
+  accessory_neck: true
+  hand_holding_object_phone: true
+  location_in_bathroom: true
+  location_indoors: true
+  hair_facial_mustache_pencil: true
+  hair_facial: true
+  hair_facial_mustache: true
+  accessory_eyewear_sunglasses: true
+  accessory_eyewear: true
+  hair_length_short: true
+  face_action_mouth_closed: true
   
-  true,
-  true,
-  false,
-
-  'blonde',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'beffermy',
-  'Beth',
-  'http://distilleryimage4.ak.instagram.com/400930d4c03411e394610002c9dd4424_8.jpg',
-
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
   
-  false,
-  false,
-  false,
+})
 
-  'brown',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'jennisaredhead',
-  'Jenny',
-  'http://photos-g.ak.instagram.com/hphotos-ak-prn/1168973_177262915802102_1978511720_n.jpg',
-
-  false,
-  true,
-  false,
-
-  false,
-  false,
-  false,
+Card.create({
+  username: 'mikerb2223'
+  description: 'Mike'
+  photo: 'http://photos-h.ak.instagram.com/hphotos-ak-prn/10005557_1416363215289151_540505832_n.jpg'
+  gender_male: true
+  accessory_eyewear_glasses: true
+  accessory_eyewear: true
+  eye_color_blue: true
+  clothing_type_hood: true
+  clothing_color_red: true
+  location_indoors: true
+  face_action_mouth_closed: true
   
-  true,
-  true,
-  false,
-
-  'red',
-  'green'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  '1dcash1',
-  'Daryl',
-  'http://distilleryimage2.ak.instagram.com/90a239b4d5cb11e1ad6922000a1e8b8a_7.jpg',
-
-  true,
-  true,
-  false,
-
-  true,
-  false,
-  true,
   
-  false,
-  false,
-  false,
+})
 
-  'black',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'mikerb2223',
-  'Mike',
-  'http://photos-h.ak.instagram.com/hphotos-ak-prn/10005557_1416363215289151_540505832_n.jpg',
-  true,
-  true,
-  true,
-
-  false,
-  false,
-  false,
+Card.create({
+  username: 'lemmebeyourmelody'
+  description: 'Melody'
+  photo: 'http://distilleryimage0.ak.instagram.com/cd184184a58811e397341273046da400_8.jpg'
+  gender_female: true
+  hair_color_red: true
+  eye_color_hazel: true
+  makeup_lipstick_red: true
+  makeup_lipstick: true
+  hand_nails_painted: true
+  hair_type_curly: true
+  hair_length_long: true
+  clothing_color_purple: true
+  clothing_type_sweater: true
+  location_indoors: true
+  face_action_mouth_closed: true
   
-  true,
-  false,
-  false,
-
-  'none',
-  'blue'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'lemmebeyourmelody',
-  'Melody',
-  'http://distilleryimage0.ak.instagram.com/cd184184a58811e397341273046da400_8.jpg',
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
   
-  false,
-  false,
-  false,
+  })
 
-  'red',
-  'gray'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'camtyo',
-  'Camile',
-  'http://scontent-a.cdninstagram.com/hphotos-frc/t51.2885-15/10269022_507788162680618_146902462_n.jpg',
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
+Card.create({
+  username: 'camtyo'
+  description: 'Camile'
+  photo: 'http://scontent-a.cdninstagram.com/hphotos-frc/t51.2885-15/10269022_507788162680618_146902462_n.jpg'
+  gender_female: true
+  hair_color_blonde: true
+  hair_length_long: true
+  hair_type_wavey: true
+  eye_color_hazel: true
+  jewelry_piercing: true
+  jewelry_piercing_ear: true
+  face_action_mouth_smile: true
+  clothing_type_tank_top: true
+  clothing_color_white: true
+  location_indoors: true
+  face_action_mouth_closed: true
   
-  true,
-  true,
-  false,
+})
 
-  'blonde',
-  'gray'
-);
+Card.create({
+  username: 'burgundylipstick'
+  description: 'Alexis'
+  photo: 'http://photos-f.ak.instagram.com/hphotos-ak-ash/1530897_240317646130429_344887049_n.jpg'
+  gender_female: true
+  eye_color_brown: true
+  clothing_type_jacket: true
+  face_action_mouth_teeth_showing: true
+  face_action_mouth_smile: true
+  face_action_mouth_open: true
+  hair_color_black: true
+  makeup_lipstick: true
+  makeup_lipstick_red: true
+  clothing_color_black: true
+  location_indoors: true
+  hair_length_long: true
 
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'burgundylipstick',
-  'Alexis',
-  'http://photos-f.ak.instagram.com/hphotos-ak-ash/1530897_240317646130429_344887049_n.jpg',
   
-  false,
-  false,
-  false,
+})
 
-  false,
-  false,
-  false,
+Card.create ({
+  username: 'jposligua'
+  description: 'Joel'
+  photo: 'http://distilleryimage5.ak.instagram.com/a350a8b0b75411e18cf91231380fd29b_7.jpg'
+  gender_male: true
+  hair_color_black: true
+  accessory_neck: true
+  accessory_neck_tie: true
+  clothing_color_blue: true
+  clothing_color_orange: true
+  accessory_eyewear_sunglasses: true
+  accessory_headphones_ear_buds: true
+  accessory_headphones: true
+  location_outdoors: true
+  clothing_type_jacket: true
+  hair_length_short: true
+  face_action_mouth_closed: true
   
-  true,
-  true,
-  false,
-
-  'black',
-  'brown'
-);
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'jposligua',
-  'Joel',
-  'http://distilleryimage5.ak.instagram.com/a350a8b0b75411e18cf91231380fd29b_7.jpg',
-
-  true,
-  true,
-  false,
-
-  false,
-  false,
-  false,
   
-  false,
-  false,
-  false,
-
-  'black',
-  'none'
-);
+})
 
 
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'medschoolchickie',
-  'Hager',
-  'http://distilleryimage2.ak.instagram.com/5984397299b811e1a39b1231381b7ba1_7.jpg',
-
-  false,
-  false,
-  false,
-
-  false,
-  false,
-  false,
+Card.create({
+  username: 'medschoolchickie'
+  description: 'Hager'
+  photo: 'http://distilleryimage2.ak.instagram.com/5984397299b811e1a39b1231381b7ba1_7.jpg'
+  gender_female: true
+  eye_color_brown: true
+  hair_color_brunette: true
+  face_action_mouth_smile: true
+  jewelry_piercing_ear: true
+  jewelry_piercing: true
+  jewelry: true
+  location_indoors: true
+  jewelry_necklass: true
+  clothing_type_tank_top: true
+  clothing_color_white: true
+  hair_length_long: true
+  hair_type_straight: true
+  face_action_mouth_closed: true
   
-  true,
-  true,
-  false,
+})
 
-  'black',
-  'brown'
-);
-
-
-INSERT INTO cards
-( username, description, instagram_picture_url, male, glasses, hat, facial_hair, beard, mustache, jewelry, earings, facial_piercing, hair_color, eye_color)
-VALUES
-(
-  'mercman256',
-  'Mercer',
-  'http://distilleryimage3.ak.instagram.com/93bf1c80a70611e3adda123e6c644eb7_8.jpg',
-
-  true,
-  false,
-  false,
-
-  false,
-  false,
-  false,
-  
-  false,
-  false,
-  false,
-
-  'brown',
-  'brown'
-);
+Card.create({
+  username: 'mercman256'
+  description: 'Mercer'
+  photo: 'http://distilleryimage3.ak.instagram.com/93bf1c80a70611e3adda123e6c644eb7_8.jpg'
+  gender_male: true
+  hair_color_brunette: true
+  hair_length_short: true
+  location_outdoors: true
+  eye_color_brown: true
+  clothing_type_jacket: true
+  clothing_color_brown: true
+  face_action_mouth_closed: true
+  face_action_mouth_frown: true
+})
