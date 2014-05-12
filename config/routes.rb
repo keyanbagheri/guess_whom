@@ -9,13 +9,20 @@ Rails.application.routes.draw do
 
     # root 'cards#index'
 
-    get 'cards/show' =>
+    # Show all cards - search function?
+    get 'cards/show' => 'cards#index'
 
-    get 'cards/create' =>
+    #Create new card
+    get 'cards/create' => 'cards#create'
 
-    get 'cards/:id/update' =>
+    # show card, maybe tags? link to edit/delete
+    get 'cards/:id/show' => 'cards#show'
 
-    get 'cards/:id/delete' =>
+    # edit page, needs to load with current tags selected
+    get 'cards/:id/update' => 'cards#edit'
+
+    # delete page, redirect_to '/cards/show'
+    get 'cards/:id/delete' => 'cards#delete'
 
     # instructions with a "Play Game!" button
     get 'game/instructions' =>
@@ -23,6 +30,19 @@ Rails.application.routes.draw do
     # actual game instance
     get 'game/play' =>
 
+
+    # Multiplayer? - Multiplayer needs minimum database
+    # size for fair gameplay. Or you could just have 9
+    # people and memorize the easiest method of parsing
+
+
+    get 'multiplayer/play'
+
+    # game history, need to figure out what to show before making DB
+    get 'multiplayer/history'
+
+    # friends to play with
+    get 'multiplayer/friends'
 
 end
 
