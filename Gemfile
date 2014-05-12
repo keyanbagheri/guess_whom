@@ -27,6 +27,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 require 'pry'
+require 'httparty'
+require 'json'
 # require 'activerecord'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
