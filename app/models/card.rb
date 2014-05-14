@@ -4,7 +4,7 @@ class Card < ActiveRecord::Base
 
   # include Facebook
   # include Imgur
-  include Instagram
+  # include Instagram
 
   def return_property_when_passed_symbol(symbol_passed_in)
     case symbol_passed_in
