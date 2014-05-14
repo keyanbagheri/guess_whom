@@ -36,13 +36,13 @@ Rails.application.routes.draw do
     # people and memorize the easiest method of parsing
 
 
-    get 'multiplayer/play'
+    # get 'multiplayer/play'
 
-    # game history, need to figure out what to show before making DB
-    get 'multiplayer/history'
+    # # game history, need to figure out what to show before making DB
+    # get 'multiplayer/history'
 
-    # friends to play with
-    get 'multiplayer/friends'
+    # # friends to play with
+    # get 'multiplayer/friends'
 
 end
 
