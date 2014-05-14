@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numb_cards_in_play: 
+  allowable_guesses: 
+  numb_of_guesses_so_far: 
+
+two:
+  numb_cards_in_play: 
+  allowable_guesses: 
+  numb_of_guesses_so_far: 

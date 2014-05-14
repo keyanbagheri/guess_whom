@@ -1,6 +1,5 @@
-# no edits made to this page yet
-
 class Card < ActiveRecord::Base
+
   # no attr_accessor
 
   # include Facebook
@@ -44,4 +43,7 @@ class Card < ActiveRecord::Base
       self.eye_color()
     end
   end
+
+  
 end
+
