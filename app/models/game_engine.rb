@@ -12,7 +12,7 @@ class Game_engine
     :beard,
     :mustache,
     :jewelry,
-    :earings,
+    :earrings,
     :facial_piercing,
     :hair_color,
     :eye_color]
@@ -26,7 +26,7 @@ class Game_engine
     beard: "Beard?",
     mustache: "Mustache?",
     jewelry: "Jewelry?",
-    earings: "Earrings?",
+    earrings: "Earrings?",
     facial_piercing: "Facial Piercing?",
     hair_color: "Hair Color?",
     eye_color: "Eye Color?"}

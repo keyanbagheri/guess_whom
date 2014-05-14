@@ -27,8 +27,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'sinatra/reloader'
 # gem 'active_record'
 gem 'pry'
+gem 'pry-rails'
 gem 'json'
-# require 'activerecord'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -16,6 +16,8 @@ class CardsController < ActionController::Base
   erb :focus
 end
 
+=begin ######### Copied this section to temp.rb for API work
+
 get '/cards/new' do
   # shows a form to input new cards
   erb :new
@@ -35,6 +37,8 @@ post '/cards' do
   redirect "/"
 end
 
+=end
+
 get '/cards/:id/update' do
   card_id = params[:id]
   @card = Card.find(card_id)
@@ -53,7 +57,7 @@ post '/cards/:id/update' do
   card.beard = params[:beard]
   card.mustache = params[:mustache]
   card.jewelry = params[:jewelry]
-  card.earings = params[:earings]
+  card.earrings = params[:earrings]
   card.facial_piercing = params[:facial_piercing]
   card.hair_color = params[:hair_color]
   card.eye_color = params[:eye_color]
@@ -71,6 +75,8 @@ get '/cards/:id/delete' do
 end
 
 
+
+=begin #################### Copied temp_api
 
 
 #### CARD GENERATOR
@@ -116,7 +122,7 @@ post '/populate' do
     beard: params[:beard],
     mustache: params[:mustache],
     jewelry: params[:jewelry],
-    earings: params[:earings],
+    earrings: params[:earrings],
     facial_piercing: params[:facial_piercing],
     hair_color: params[:hair_color],
     eye_color: params[:eye_color]
@@ -125,7 +131,7 @@ post '/populate' do
 end
 
 
-
+=end
 
 #### GAME ENGINE
 get '/display_game' do

@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     # get 'multiplayer/history'
 
     # friends to play with
+
     # get 'multiplayer/friends'
 
 end
