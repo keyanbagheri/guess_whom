@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     # root 'cards#index'
 ########### CHRIS ROUTE EDITS #############
 
+  get '/' => "cards#index"
+
   get 'cards/new' => 'cards#new'
 
 
