@@ -31,11 +31,11 @@ class Card < ActiveRecord::Base
       when :jewelry
       self.jewelry()
 
-      when :earings
-      self.earings()
+      when :earrings
+      self.earrings()
 
       when :facial_piercing
-      self.earings()
+      self.earrings()
 
       when :hair_color
       self.hair_color()
