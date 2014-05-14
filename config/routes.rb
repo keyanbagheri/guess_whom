@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   get 'cards/new' => 'cards#new'
 
+
+  get 'cards/generate/:username' => 'cards#generate'
+
   # get 'cards/:username'
 
 
