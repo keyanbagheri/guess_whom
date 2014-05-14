@@ -4,9 +4,9 @@ class CardsController < ActionController::Base
 
   #need to edit everythin below
 
-#   def 'index'
-
-#   end
+  def index
+  	@cards = Card.all
+  end
 
 #   get '/cards/:id' do
 #   # show me a single cards with given id
@@ -30,7 +30,7 @@ class CardsController < ActionController::Base
 #   Card.create(
 #     username: username,
 #     description: description,
-#     instagram_picture_url: url
+#     photo_url: url
 #     )
 #   redirect "/"
 # end
@@ -102,7 +102,7 @@ class CardsController < ActionController::Base
 #   end
 #   @@additional_card = Card.new
 #   @@additional_card[:username] = card_username
-#   @@additional_card[:instagram_picture_url] = card_url
+#   @@additional_card[:photo_url] = card_url
 #   @@additional_card[:description] = "description"
 #   #comment out erbpopulate_new_card
 # end
@@ -110,7 +110,7 @@ class CardsController < ActionController::Base
 # post '/populate' do
 #   Card.create(
 #     username: @@additional_card[:username],
-#     instagram_picture_url: @@additional_card[:instagram_picture_url],
+#     photo_url: @@additional_card[:photo_url],
 #     description: @@additional_card[:description],
 #     male: params[:male],
 #     glasses: params[:glasses],
@@ -250,4 +250,4 @@ class CardsController < ActionController::Base
 #   else
 #     erb :guessed_wrong_message
 #   end
-# end
+end

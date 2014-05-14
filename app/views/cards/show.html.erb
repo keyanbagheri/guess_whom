@@ -4,8 +4,8 @@
 <% if @card %>
   <div class="card_focus">
         <div>
-          <p><img src="<%= @card.instagram_picture_url %>"/></p>
-          <h2><%= @card.username %></h2>
+          <p><img src="<%= @card.photo_url %>"/></p>
+          <h2><%= @card.instagram_username %></h2>
             <h4><a href="/cards/<%=@card.id%>/update">edit</a> | <a href="/cards/<%= @card.id %>/delete">delete</a></h4>
           </p>
         </div>

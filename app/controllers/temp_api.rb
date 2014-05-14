@@ -41,7 +41,7 @@ post '/cards' do
   Card.create(
     username: username,
     description: description,
-    instagram_picture_url: url
+    photo_url: url
     )
   redirect "/"
 end
@@ -73,7 +73,7 @@ get '/generate_new_card/:selfie_username' do
   end
   @@additional_card = Card.new
   @@additional_card[:username] = card_username
-  @@additional_card[:instagram_picture_url] = card_url
+  @@additional_card[:photo_url] = card_url
   @@additional_card[:description] = "description"
   erb :populate_new_card
 end
@@ -81,7 +81,7 @@ end
 post '/populate' do
   Card.create(
     username: @@additional_card[:username],
-    instagram_picture_url: @@additional_card[:instagram_picture_url],
+    photo_url: @@additional_card[:photo_url],
     description: @@additional_card[:description],
     male: params[:male],
     glasses: params[:glasses],

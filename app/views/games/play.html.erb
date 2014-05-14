@@ -6,8 +6,8 @@
   <ul>
     <% Game_engine.grid_cards.each do |card| %>
     <div class="card">
-      <p><a href="/winner_inquiry/<%=card.username%>"><img src="<%= card.instagram_picture_url %>"/></a></p>
-      <h3><%= card.username %></h3>
+      <p><a href="/winner_inquiry/<%=card.instagram_username%>"><img src="<%= card.photo_url %>"/></a></p>
+      <h3><%= card.instagram_username %></h3>
     </div>
     <%end%>
   </ul>
