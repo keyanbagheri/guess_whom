@@ -1,5 +1,8 @@
 class Card < ActiveRecord::Base
 
+  has_many :games, through: :cards_included_in_game
+  has_one :user
+  
   # no attr_accessor
 
   # include Facebook
