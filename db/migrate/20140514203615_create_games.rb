@@ -4,6 +4,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :numb_cards_in_play
       t.integer :allowable_guesses
       t.integer :numb_of_guesses_so_far
+      t.integer :winning_card_id
 
       t.timestamps
     end
