@@ -341,3 +341,37 @@ Card.create({
   face_action_mouth_closed: true
   face_action_mouth_frown: true
 })
+
+
+
+
+
+
+current_user = User.create({
+  username = 'game master'
+  facebook_username = 'maxwellrandall'
+  instagram_username = 'maxwellrandall'
+  card_id = nil
+  })
+
+
+
+
+current_game = Game.create({
+  num_of_cards_in_play: 9,
+  allowable_guesses: 3,
+  num_of_guesses_so_far: 0,
+  winning_card_id: Card.all.sample   #hard coded for now
+  })         
+
+UserGameRecord.create({
+  user_id: current_user.id
+  game_id: current_game.id
+})
+
+
+num_of_cards_in_play.times do
+  CreateCardsIncludedInGames.create({
+    game_id: current_game.id
+    card_id: Cards.all.sample.id
+})
