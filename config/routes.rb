@@ -18,22 +18,25 @@ Rails.application.routes.draw do
 
 ############ CHRIS END ################
 
-    # Show all cards - search function?
-    root to: 'cards#index'
+ 
+    # get '/' => 'cards#index'
 
-    get 'cards/' => 'cards#index'
+    # # Show all cards - search function?
+    # root to: 'cards#index'
 
-    #Create new card
-    get 'cards/create' => 'cards#create'
+    # get 'cards/' => 'cards#index'
 
-    # show card, maybe tags? link to edit/delete
-    get 'cards/:id/show' => 'cards#show'
+    # #Create new card
+    # get 'cards/create' => 'cards#create'
 
-    # edit page, needs to load with current tags selected
-    get 'cards/:id/update' => 'cards#edit'
+    # # show card, maybe tags? link to edit/delete
+    # get 'cards/:id/show' => 'cards#show'
 
-    # delete page, redirect_to '/cards/show'
-    get 'cards/:id/delete' => 'cards#delete'
+    # # edit page, needs to load with current tags selected
+    # get 'cards/:id/update' => 'cards#edit'
+
+    # # delete page, redirect_to '/cards/show'
+    # get 'cards/:id/delete' => 'cards#delete'
 
     # instructions with a "Play Game!" button
     # get 'game/instructions' =>
