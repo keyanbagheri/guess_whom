@@ -4,23 +4,21 @@ class CardsController < ActionController::Base
 
   #need to edit everythin below
 
-  get '/' do
-    @cards = Card.all
-    erb :cardindex
+  def 'index'
+
   end
 
   get '/cards/:id' do
   # show me a single cards with given id
   card_id = params[:id]
   @card = Card.find(card_id)
-  erb :focus
 end
 
 =begin ######### Copied this section to temp.rb for API work
 
 get '/cards/new' do
   # shows a form to input new cards
-  erb :new
+  #comment out erbnew
 end
 
 post '/cards' do
@@ -42,7 +40,6 @@ end
 get '/cards/:id/update' do
   card_id = params[:id]
   @card = Card.find(card_id)
-  erb :update
 end
 
 post '/cards/:id/update' do
@@ -92,7 +89,7 @@ get '/generate_new_card' do
     current_selfie_array = [username, image_url]
     @@selfie_array << current_selfie_array
   end
-  erb :generate_new_card
+  #comment out erbgenerate_new_card
 end
 
 get '/generate_new_card/:selfie_username' do
@@ -107,7 +104,7 @@ get '/generate_new_card/:selfie_username' do
   @@additional_card[:username] = card_username
   @@additional_card[:instagram_picture_url] = card_url
   @@additional_card[:description] = "description"
-  erb :populate_new_card
+  #comment out erbpopulate_new_card
 end
 
 post '/populate' do
@@ -135,7 +132,6 @@ end
 
 #### GAME ENGINE
 get '/display_game' do
-  erb :game
 end
 
 
@@ -156,12 +152,12 @@ end
 get '/winner_inquiry/:card_selected_username' do
   @card_selected_username = params[:card_selected_username]
   if Game_engine.check_if_winner_by_username(@card_selected_username)
-    erb :win_message
+    @won_game = true
   elsif Game_engine.wrong_guess_counter >= Game_engine.guesses_allowed
     Game_engine.reset_game()
-    erb :loose_message
+    @won_game = false
   else
-    erb :guessed_wrong_message
+    #comment out erbguessed_wrong_message
   end
 end
 
