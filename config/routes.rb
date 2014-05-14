@@ -8,6 +8,15 @@ Rails.application.routes.draw do
 ####### Potential routes
 
     # root 'cards#index'
+########### CHRIS ROUTE EDITS #############
+
+  get 'cards/new' => 'cards#new'
+
+  get 'cards/:username'
+
+
+
+############ CHRIS END ################
 
     # Show all cards - search function?
     root to: 'cards#index'
