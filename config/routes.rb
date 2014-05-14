@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'cards/new' => 'cards#new'
 
-  get 'cards/:username'
+  # get 'cards/:username'
 
 
 

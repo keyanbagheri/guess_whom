@@ -348,10 +348,10 @@ Card.create({
 
 
 current_user = User.create({
-  username = 'game master'
-  facebook_username = 'maxwellrandall'
-  instagram_username = 'maxwellrandall'
-  card_id = nil
+  username: 'game master',
+  # facebook_username: 'maxwellrandall',
+  instagram_username: 'maxwellrandall',
+  card_id: nil
   })
 
 
@@ -365,13 +365,14 @@ current_game = Game.create({
   })         
 
 UserGameRecord.create({
-  user_id: current_user.id
+  user_id: current_user.id,
   game_id: current_game.id
 })
 
 
-num_of_cards_in_play.times do
-  CreateCardsIncludedInGames.create({
-    game_id: current_game.id
-    card_id: Cards.all.sample.id
+current_game.num_of_cards_in_play.times do
+  CardsIncludedInGame.create({
+    game_id: current_game.id,
+    card_id: Card.all.sample.id
 })
+end
