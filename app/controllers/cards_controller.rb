@@ -16,6 +16,8 @@ class CardsController < ActionController::Base
   erb :focus
 end
 
+=begin ######### Copied this section to temp.rb for API work
+
 get '/cards/new' do
   # shows a form to input new cards
   erb :new
@@ -34,6 +36,8 @@ post '/cards' do
     )
   redirect "/"
 end
+
+=end
 
 get '/cards/:id/update' do
   card_id = params[:id]
@@ -71,6 +75,8 @@ get '/cards/:id/delete' do
 end
 
 
+
+=begin #################### Copied temp_api
 
 
 #### CARD GENERATOR
@@ -125,7 +131,7 @@ post '/populate' do
 end
 
 
-
+=end
 
 #### GAME ENGINE
 get '/display_game' do
