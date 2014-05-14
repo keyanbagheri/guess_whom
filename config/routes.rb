@@ -25,10 +25,10 @@ Rails.application.routes.draw do
     get 'cards/:id/delete' => 'cards#delete'
 
     # instructions with a "Play Game!" button
-    get 'game/instructions' =>
+    # get 'game/instructions' =>
 
     # actual game instance
-    get 'game/play' =>
+    # get 'game/play' =>
 
 
     # Multiplayer? - Multiplayer needs minimum database
@@ -36,13 +36,13 @@ Rails.application.routes.draw do
     # people and memorize the easiest method of parsing
 
 
-    get 'multiplayer/play'
+    # get 'multiplayer/play'
 
     # game history, need to figure out what to show before making DB
-    get 'multiplayer/history'
+    # get 'multiplayer/history'
 
     # friends to play with
-    get 'multiplayer/friends'
+    # get 'multiplayer/friends'
 
 end
 
