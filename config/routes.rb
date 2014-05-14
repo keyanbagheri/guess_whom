@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     # root 'cards#index'
 
     # Show all cards - search function?
-    get 'cards/show' => 'cards#index'
+    root to: 'cards#index'
+
+    get 'cards/' => 'cards#index'
 
     #Create new card
     get 'cards/create' => 'cards#create'
