@@ -31,10 +31,6 @@ class CardsController < ActionController::Base
 end
 
 
-get '/cards/new' do
-  # shows a form to input new cards
-  erb :new
-end
 
 post '/cards' do
   # processes new cards data
