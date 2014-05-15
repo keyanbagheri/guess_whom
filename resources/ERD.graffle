@@ -3849,7 +3849,7 @@ has_one: user}</string>
 \fs20 \
 
 \f0\b0\fs12 belongs_to: users\
-has_many :cards    through included_cards}</string>
+has_many :cards    through cards_included_in_game}</string>
 						<key>VerticalPad</key>
 						<integer>8</integer>
 					</dict>
@@ -6282,7 +6282,7 @@ belongs_to: card
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-05-15 00:59:38 +0000</string>
+	<string>2014-05-15 01:16:55 +0000</string>
 	<key>Modifier</key>
 	<string>John Randall</string>
 	<key>NotesVisible</key>
@@ -6377,7 +6377,7 @@ belongs_to: card
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{434, 0}, {714, 414}}</string>
+		<string>{{479.60000000000002, 0}, {713.99999999999989, 414}}</string>
 		<key>Zoom</key>
 		<real>2.5</real>
 		<key>ZoomValues</key>

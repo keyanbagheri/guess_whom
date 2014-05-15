@@ -3,7 +3,8 @@ class Game < ActiveRecord::Base
 	# It SHOULD also incorporates the functionality fortunately found in the game engine
 
 	belongs_to :user
-	has_many :cards, through: cards_included_in_game
+	has_many :cards_included_in_game
+	has_many :cards, through: :cards_included_in_game
 	
 	def self.start_game
 		#Creates new game and sets defaults. These should probably be called from user preferences or external config file in version X.
@@ -25,21 +26,23 @@ class Game < ActiveRecord::Base
 		# Select a random hand of cards to play with
 		# The resulting join table should be accessible via .cards
 		# unless input_hash[:cards_included_in_game]
-			full_deck = Card.all.suffle
+			full_deck = Card.all.shuffle
+
 
 			current_game.num_of_cards_in_play.times do
   				CardsIncludedInGame.create({
-    										game_id: @current_game.id,
+    										game_id: current_game.id,
     										card_id: full_deck.pop.id
 									})
   			end
   		# end
 
 		# unless input_hash[:winning_card_id]
-			current_game.winning_card_id = self.cards.sample.id
+			current_game.winning_card_id = current_game.cards.sample.id
 		# end
 
 		current_game.save!
+		return current_game
 	end
 
 
