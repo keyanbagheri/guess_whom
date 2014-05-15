@@ -1,37 +1,16 @@
-<!-- no edits made to this page yet -->
-
-
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
 <div class="gameboard">
-   <h2>Guess Who!</h2>
-    <% @current_game.cards.each do |card| %>
-        <div class="card">
-            <p><a href="/play/winner_inquiry/<%=card.id%>">
-            <img src="<%= card.photo_url %>"/></a></p>
-            <h3><%= card.instagram_username %></h3>
-        </div>
-    <% end %>
+  <h2>Guess Who!</h2>
+
+<div class="card_grid">
+  <% @current_game.cards.each do |card| %>
+    <div class="card">
+      <p><a href="/play/winner_inquiry/<%=card.id%>"><img src="<%= card.photo_url %>"/></a></p>
+      <h3><%= card.instagram_username %></h3>
+    </div>
+  <% end %>
 </div>
-
-
-
-<div class="question_block">
-      <ul>
-         <% Game_engine.array_of_questions.each do |question_obj| %>
-                      <div class="question_list">
-                         <li><a href="question_selection/<%=question_obj.question_sym%>"><%= question_obj.question_text %></a></li>
-
-                              <% if question_obj.question_revealed_status == true%>
-                                  <li>
-                                      <% revealed_sym = question_obj.question_sym  %>
-                                      <%= Game_engine.winner.return_property_when_passed_symbol(revealed_sym) %>
-                                  </li>
-                              <% else %>
-                              <% end %>
-
-                      </div>
-          <% end %>
-      </ul>
 </div>
-
-

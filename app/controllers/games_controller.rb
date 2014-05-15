@@ -4,25 +4,26 @@ class GamesController < ActionController::Base
 	def reset_game
 		@current_game = Game.start_game
 		# render json: @current_game
-
 		redirect_to "/play/#{@current_game.id}"
 		# play()
-  	end
+	end
 
-  	def wrong_guess
-  		card_guessed = Card.find(params[:card_id])
-  		@current_game.num_of_guesses_so_far = @current_game.num_of_guesses_so_far + 1
-  		@current_game.save!
-  		if @current_game.num_of_guesses_so_far < @current_game.allowable_guesses
-  			redirect_to "/games/wrong"
-  		else
-  			if card_guessed == @current_game.winning_card_id
-  			@won_game = true
-  			else
-  			@won_game = false
-  		end
-  		redirect_to "/games/outcome"
-  	end
+	def wrong_guess
+		card_guessed = Card.find(params[:card_id])
+		@current_game.num_of_guesses_so_far = @current_game.num_of_guesses_so_far + 1
+		@current_game.save!
+		if @current_game.num_of_guesses_so_far < @current_game.allowable_guesses
+			redirect_to "/games/wrong"
+		else
+			if card_guessed == @current_game.winning_card_id
+				@won_game = true
+			else
+				@won_game = false
+			end
+			redirect_to "/games/outcome"
+		end
+
+	end
 
 	def play
 		# render json: @current_game.cards
@@ -56,12 +57,12 @@ class GamesController < ActionController::Base
 		@card_guessed = Card.find(params[:card_id])
 		@current_game.num_of_guesses_so_far= @current_game.num_of_guesses_so_far +1
 		if card_guessed.id == @current_game.winning_card_id
-      		redirect_to "/play/#{@current_game.id}/win"
-    		else
-      		if @current_game.num_of_guesses_so_far >= @current_game.allowable_guesses
-      			redirect_to "/play/#{@current_game.id}/lose"
-      		else
-      			redirect_to "/play/#{@current_game.id}"
+			redirect_to "/play/#{@current_game.id}/win"
+		else
+			if @current_game.num_of_guesses_so_far >= @current_game.allowable_guesses
+				redirect_to "/play/#{@current_game.id}/lose"
+			else
+				redirect_to "/play/#{@current_game.id}"
 			end
 		end
 	end
