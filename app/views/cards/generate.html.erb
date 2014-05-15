@@ -1,93 +1,91 @@
 <div class="card_focus">
-    <p><img src="<%= @user.photo_url%>"/></p>
-  </h3><%= @user.instagram_username %></h3>
+    <p><img src="<%= @new_selfie.photo_url%>"/></p>
+  </h3><%= @new_selfie.instagram_username %></h3>
 </div>
 
 
-
 <div class="update">
-<form action="" method="POST">
+<%= form_for @new_selfie do |f| %>
   <p>
     Are they male?
-    <input type="text" name="gender_male" value="false">
+    <%= f.text_area :gender_male, value: "false" %>
   </p>
   <p>
     Are they male?
-    <input type="text" name="gender_female" value="false">
+    <%= f.text_area :gender_female, value: "false"%>
   </p>
   <p>
     Are they wearring glasses?
-    <input type="text" name="accessory_eyewear_glasses" value="false">
+    <%= f.text_area :accessory_eyewear_glasses, value: "false"%>
   </p>
   <p>
     Are they wearring a hat?
-    <input type="text" name="clothing_hat" value="false">
+    <%= f.text_area :clothing_hat, value: "false"%>
   </p>
   <p>
     Do they have facial hair?
-    <input type="text" name="hair_facial" value="false">
+    <%= f.text_area :hair_facial, value: "false"%>
   </p>
   <p>
     Do they have a beard?
-    <input type="text" name="hair_facial_beard" value="false">
+    <%= f.text_area :hair_facial_beard, value: "false"%>
   </p>
   <p>
     Do they have a mustache?
-    <input type="text" name="hair_facial_mustache" value="false">
+    <%= f.text_area :hair_facial_mustache, value: "false"%>
   </p>
   <p>
     Are they wearring jewelry?
-    <input type="text" name="jewelry" value="false">
+    <%= f.text_area :jewelry, value: "false"%>
   </p>
   <p>
     Are they wearring earrings?
-    <input type="text" name="jewelry_piercing_ear" value="false">
+    <%= f.text_area :jewelry_piercing_ear, value: "false"%>
   </p>
     <p>
     Do they have any facial piercings?
-    <input type="text" name="jewelry_piercing_facial" value="false">
+    <%= f.text_area :jewelry_piercing_facial, value: "false"%>
   </p>
   <p>
     Do they have long hair?
-    <input type="text" name="hair_length_long" value="none" >
+    <%= f.text_area :hair_length_long, value: "false" %>
   </p>
   <p>
     Do they have short hair?
-    <input type="text" name="hair_length_short" value="none" >
+    <%= f.text_area :hair_length_short, value: "false" %>
   </p>
   <p>
     Do they have brown hair??
-    <input type="text" name="hair_color_brunette" value="none">
+    <%= f.text_area :hair_color_brunette, value: "false" %>
   </p>
   <p>
     Do they have brown eyes?
-    <input type="text" name="eye_color_brown" value="none" >
+    <%= f.text_area :eye_color_brown, value: "false" %>
   </p>
   <p>
     Do they have blonde hair?
-    <input type="text" name="hair_color_blonde" value="none" >
+    <%= f.text_area :hair_color_blonde, value: "false" %>
   </p>
   <p>
     Do they have red hair?
-    <input type="text" name="hair_color_red" value="none" >
+    <%= f.text_area :hair_color_red, value: "false" %>
   </p>
   <p>
     Do they have black hair?
-    <input type="text" name="hair_color_black" value="none" >
+    <%= f.text_area :hair_color_black, value: "false" %>
   </p>
   <p>
     Do they have green eyes?
-    <input type="text" name="eye_color_green" value="none" >
+    <%= f.text_area :eye_color_green, value: "false" %>
   </p>
   <p>
     Do they have blue eyes?
-    <input type="text" name="eye_color_blue" value="none" >
+    <%= f.text_area :eye_color_blue, value: "false" %>
   </p>
-
-
-
-  <input type="submit" value="Create card" />
-</form>
+    <%= f.hidden_field :photo_url, value: @new_selfie.photo_url %>
+  <%= f.hidden_field :instagram_username, value: @new_selfie.instagram_username %>
+  <%= f.submit %>
+<% end %>
 </div>
 
 

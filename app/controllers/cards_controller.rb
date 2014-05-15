@@ -23,7 +23,10 @@ class CardsController < ActionController::Base
 
 
   def generate
-    @user = Tempselfie.find_by_instagram_username(params[:username])
+    user = Tempselfie.find_by_instagram_username(params[:username])
+    # binding.pry
+    @new_selfie = Card.new
+    @new_selfie.instagram_username = user.instagram_username
   end
 
   def show
