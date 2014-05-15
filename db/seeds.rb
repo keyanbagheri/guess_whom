@@ -380,3 +380,10 @@ current_game.num_of_cards_in_play.times do
 end
 
 
+<!-- no edits made to this page yet -->
+
+
+  <div class="card_focus">
+          <p><img src="photo_url"/></p>
+          <h2><%= [:username] %></h2>
+  </div>

@@ -1,4 +1,3 @@
-###### Temporary imaginary controller for cards generation
 class CardsController < ActionController::Base
 
   def new
