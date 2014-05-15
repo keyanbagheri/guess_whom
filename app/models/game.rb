@@ -3,8 +3,49 @@ class Game < ActiveRecord::Base
 	# It SHOULD also incorporates the functionality fortunately found in the game engine
 
 	belongs_to :user
-	has_many :cards, through: included_cards
+	has_many :cards_included_in_game
+	has_many :cards, through: :cards_included_in_game
 	
+	def self.start_game
+		#Creates new game and sets defaults. These should probably be called from user preferences or external config file in version X.
+		current_game = self.create()
+
+		# unless input_hash[:num_of_cards_in_play]
+			current_game.num_of_cards_in_play= 9
+		# end
+
+		# unless input_hash[:allowable_guesses]
+			current_game.allowable_guesses= 3
+		# end
+
+		# unless input_hash[:num_of_guesses_so_far]
+			current_game.num_of_guesses_so_far= 0
+		# end
+
+
+		# Select a random hand of cards to play with
+		# The resulting join table should be accessible via .cards
+		# unless input_hash[:cards_included_in_game]
+			full_deck = Card.all.shuffle
+
+
+			current_game.num_of_cards_in_play.times do
+  				CardsIncludedInGame.create({
+    										game_id: current_game.id,
+    										card_id: full_deck.pop.id
+									})
+  			end
+  		# end
+
+		# unless input_hash[:winning_card_id]
+			current_game.winning_card_id = current_game.cards.sample.id
+		# end
+
+		current_game.save!
+		return current_game
+	end
+
+
 	## GAME CONFIG
 		## THIS STUFF IS A KLUDGE AND SHOULD BE RE-THOUGHT. it might also be set in user prefernces perhaps.
 		  @@tag_questions_order = [

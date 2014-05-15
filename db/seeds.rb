@@ -347,6 +347,8 @@ Card.create({
 
 
 
+
+
 current_user = User.create({
   username: 'game master',
   # facebook_username: 'maxwellrandall',
@@ -376,3 +378,12 @@ current_game.num_of_cards_in_play.times do
     card_id: Card.all.sample.id
 })
 end
+
+
+<!-- no edits made to this page yet -->
+
+
+  <div class="card_focus">
+          <p><img src="photo_url"/></p>
+          <h2><%= [:username] %></h2>
+  </div>

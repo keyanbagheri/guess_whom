@@ -1,7 +1,9 @@
 class Card < ActiveRecord::Base
 
-  has_many :games, through: :cards_included_in_game
   has_one :user
+  has_many :cards_included_in_game
+  has_many :games, through: :cards_included_in_game
+  
 
   # no attr_accessor
 

@@ -22,11 +22,16 @@ Rails.application.routes.draw do
 
   get '/cards/:id/delete' => 'cards#delete'
     # get 'cards/:username'
-
+  
 
 
 ############ CHRIS END ################
 
+
+
+############ GAMEPLAY - JOHN
+    get '/reset_game'       => 'games#reset_game'
+    get '/play/:game_id'    => 'games#play'
 
     # get '/' => 'cards#index'
 
@@ -67,6 +72,8 @@ Rails.application.routes.draw do
     # friends to play with
 
     # get 'multiplayer/friends'
+
+
 
 end
 

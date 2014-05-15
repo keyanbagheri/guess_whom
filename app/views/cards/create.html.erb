@@ -1,36 +1,33 @@
-<!-- no edits made to this page yet -->
-
-
-  <div class="card_focus">
-          <p><img src="photo_url"/></p>
-          <h2><%= [:username] %></h2>
-  </div>
 
 <div class="update">
-<form action="/populate" method="POST">
+<form action="/create" method="POST">
   <p>
     Are they male?
-    <input type="text" name="male" value="false">
+    <input type="text" name="gender_male" value="false">
+  </p>
+  <p>
+    Are they male?
+    <input type="text" name="gender_female" value="false">
   </p>
   <p>
     Are they wearring glasses?
-    <input type="text" name="glasses" value="false">
+    <input type="text" name="accessory_eyewear_glasses" value="false">
   </p>
   <p>
     Are they wearring a hat?
-    <input type="text" name="hat" value="false">
+    <input type="text" name="clothing_hat" value="false">
   </p>
   <p>
     Do they have facial hair?
-    <input type="text" name="facial_hair" value="false">
+    <input type="text" name="hair_facial" value="false">
   </p>
   <p>
     Do they have a beard?
-    <input type="text" name="beard" value="false">
+    <input type="text" name="hair_facial_beard" value="false">
   </p>
   <p>
     Do they have a mustache?
-    <input type="text" name="mustache" value="false">
+    <input type="text" name="hair_facial_mustache" value="false">
   </p>
   <p>
     Are they wearring jewelry?
@@ -38,21 +35,54 @@
   </p>
   <p>
     Are they wearring earrings?
-    <input type="text" name="earrings" value="false">
+    <input type="text" name="jewelry_piercing_ear" value="false">
   </p>
     <p>
     Do they have any facial piercings?
-    <input type="text" name="facial_piercing" value="false">
+    <input type="text" name="jewelry_piercing_facial" value="false">
   </p>
   <p>
-    What is their hair color?
-    <input type="text" name="hair_color" value="none">
+    Do they have long hair?
+    <input type="text" name="hair_length_long" value="none" >
   </p>
   <p>
-    What is their eye color?
-    <input type="text" name="eye_color" value="none" >
+    Do they have short hair?
+    <input type="text" name="hair_length_short" value="none" >
   </p>
+  <p>
+    Do they have brown hair??
+    <input type="text" name="hair_color_brunette" value="none">
+  </p>
+  <p>
+    Do they have brown eyes?
+    <input type="text" name="eye_color_brown" value="none" >
+  </p>
+  <p>
+    Do they have blonde hair?
+    <input type="text" name="hair_color_blonde" value="none" >
+  </p>
+  <p>
+    Do they have red hair?
+    <input type="text" name="hair_color_red" value="none" >
+  </p>
+  <p>
+    Do they have black hair?
+    <input type="text" name="hair_color_black" value="none" >
+  </p>
+  <p>
+    Do they have green eyes?
+    <input type="text" name="eye_color_green" value="none" >
+  </p>
+  <p>
+    Do they have blue eyes?
+    <input type="text" name="eye_color_blue" value="none" >
+  </p>
+
+
 
   <input type="submit" value="Create card" />
 </form>
 </div>
+
+
+
