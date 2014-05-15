@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515011208) do
+ActiveRecord::Schema.define(version: 20140515161514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "card_tags", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cards", force: true do |t|
     t.integer  "created_by_user_id"
@@ -227,11 +232,23 @@ ActiveRecord::Schema.define(version: 20140515011208) do
     t.datetime "updated_at"
   end
 
+  create_table "game_questions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "games", force: true do |t|
     t.integer  "num_of_cards_in_play"
     t.integer  "allowable_guesses"
     t.integer  "num_of_guesses_so_far"
     t.integer  "winning_card_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "question_text"
+    t.boolean  "included_in_game"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

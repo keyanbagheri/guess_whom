@@ -3,8 +3,12 @@ class Game < ActiveRecord::Base
 	# It SHOULD also incorporates the functionality fortunately found in the game engine
 
 	belongs_to :user
+
 	has_many :cards_included_in_game
 	has_many :cards, through: :cards_included_in_game
+
+	has_many :game_questions
+	has_many :questions, through: :game_questions
 	
 	def self.start_game
 		#Creates new game and sets defaults. These should probably be called from user preferences or external config file in version X.
