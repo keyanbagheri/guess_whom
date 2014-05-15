@@ -10,8 +10,6 @@ class CardsController < ActionController::Base
     Tempselfie.delete_all
     url = "https://api.instagram.com/v1/tags/selfie/media/recent?client_id=4103708a8bb2413ea434757ae68c811f"
     response = HTTParty.get(url)
-    full_selfie_array = []
-    @selfie_array = []
     numbers = (0...20).to_a.sample 9
     numbers.each do |x|
       photo_url = response["data"][x]["images"]["standard_resolution"]["url"]
