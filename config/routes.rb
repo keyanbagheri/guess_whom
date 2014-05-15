@@ -40,6 +40,9 @@ Rails.application.routes.draw do
 
     get '/play/:game_id/win' => 'games#win'
     get '/play/:game_id/loose' => 'games#loose'
+
+
+    get 'play/:game_id/render'  => 'games#render'
     # get '/' => 'cards#index'
 
     # # Show all cards - search function?

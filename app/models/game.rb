@@ -42,8 +42,33 @@ class Game < ActiveRecord::Base
 		# end
 
 		current_game.save!
+		puts current_game
 		return current_game
 	end
+
+
+	def process_winner_inquiry(card_guessed_id)	
+		# puts self
+		temp = self.num_of_guesses_so_far
+		self.num_of_guesses_so_far = temp +1
+		if card_guessed_id == @winning_card_id
+			return :win
+			# render text: 'WIN'
+      		# redirect_to "/play/#{id}/win"
+    		else
+      		if self.num_of_guesses_so_far >= self.allowable_guesses
+      			return :lose
+      			# render text: 'LOSE'
+      			# redirect_to "/play/#{id}/lose"
+      		else
+      			return :return_to_game
+      			# render text: 'TRY AGAIN'
+      			# redirect_to "/play/#{id}"
+			end
+		end
+		self.save!
+	end
+
 
 
 	## GAME CONFIG
