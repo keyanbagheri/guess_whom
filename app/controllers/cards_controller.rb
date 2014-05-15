@@ -13,13 +13,12 @@ class CardsController < ActionController::Base
     @selfie_array = []
     numbers = (0...20).to_a.sample 9
     numbers.each do |x|
-      temp_card = Card.new
-
-      temp_card.photo_url = response["data"][x]["images"]["standard_resolution"]["url"]
-      temp_card.instagram_username = response["data"][x]["user"]["username"]
-      # current_selfie_array = [username, image_url]
-      @selfie_array << temp_card # current_selfie_array
-
+      photo_url = response["data"][x]["images"]["standard_resolution"]["url"]
+      instagram_username = response["data"][x]["user"]["username"]
+      Tempselfie.create({
+        instagram_username: instagram_username,
+        photo_url: photo_url
+        })
     end
   end
 
@@ -28,17 +27,8 @@ class CardsController < ActionController::Base
     @selfie = params[:username]
   end
 
-
-  private
-
-  def card_attributes
-
-    params.require(:card).permit(:username, :description, :photo_url)
-  end
-
-
   def show
-    card_id = params[:id]
+    card_id = params[:id].to_i
     @card = Card.find(card_id)
   end
 
