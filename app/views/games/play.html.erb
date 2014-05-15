@@ -1,17 +1,18 @@
 <!-- no edits made to this page yet -->
 
 
+
 <div class="gameboard">
-    <h2>Guess Who!</h2>
-  <ul>
-    <% Game_engine.grid_cards.each do |card| %>
-    <div class="card">
-      <p><a href="/winner_inquiry/<%=card.instagram_username%>"><img src="<%= card.photo_url %>"/></a></p>
-      <h3><%= card.instagram_username %></h3>
-    </div>
-    <%end%>
-  </ul>
+   <h2>Guess Who!</h2>
+    <% @current_game.cards.each do |card| %>
+        <div class="card">
+            <p><a href="/play/winner_inquiry/<%=card.id%>">
+            <img src="<%= card.photo_url %>"/></a></p>
+            <h3><%= card.instagram_username %></h3>
+        </div>
+    <% end %>
 </div>
+
 
 
 <div class="question_block">

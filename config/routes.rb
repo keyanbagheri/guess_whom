@@ -32,6 +32,7 @@ Rails.application.routes.draw do
     get '/reset_game'       => 'games#reset_game'
     get '/play/:game_id'    => 'games#play'
 
+    get '/play/winner_inquiry/:card_id' => 'games#process_winner_inquiry'
     # get '/' => 'cards#index'
 
     # # Show all cards - search function?
