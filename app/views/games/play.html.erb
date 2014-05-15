@@ -2,8 +2,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-Current game is = <%=@current_game.id%>
-num_of_guesses_so_far = <%=@current_game.num_of_guesses_so_far %>
 
 <div class="gameboard">
   <h2>Guess Who!</h2>
@@ -11,9 +9,21 @@ num_of_guesses_so_far = <%=@current_game.num_of_guesses_so_far %>
 <div class="card_grid">
   <% @current_game.cards.each do |card| %>
     <div class="card">
-      <p><a href="/play/<%=@current_game.id%>/winner_inquiry/<%=card.id%>"><img src="<%= card.photo_url %>"/></a></p>
+      <p><a href="/play/<%=@current_game.id%>/winner_inquiry/<%=card.id%>">
+        <img src="<%= card.photo_url %>"/></a></p>
       <h3><%= card.instagram_username %></h3>
     </div>
   <% end %>
 </div>
 </div>
+
+
+
+
+
+<ul>
+  <li> Current game is = <%= @current_game.id%>
+  <li> current cards: <% @current_game.cards.each do |card|%> <%= card.id %> <% end %>
+  <li> winner: <%= @current_game.winning_card_id %>
+  <li> num_of_guesses_so_far = <%=@current_game.num_of_guesses_so_far %>
+</ul>
