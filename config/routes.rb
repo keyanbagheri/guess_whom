@@ -16,13 +16,16 @@ Rails.application.routes.draw do
 
   get '/cards/new' => 'cards#new'
 
+  get '/cards/generate/:username' => 'cards#generate'
+
+  post '/cards/create' => 'cards#create'
+
   get '/cards/:id' => 'cards#show'
 
-  get '/cards/generate/:username' => 'cards#generate'
 
   get '/cards/:id/delete' => 'cards#delete'
     # get 'cards/:username'
-  
+
 
 
 ############ CHRIS END ################

@@ -7,6 +7,7 @@ class CardsController < ActionController::Base
   end
 
   def new
+    Tempselfie.delete_all
     url = "https://api.instagram.com/v1/tags/selfie/media/recent?client_id=4103708a8bb2413ea434757ae68c811f"
     response = HTTParty.get(url)
     full_selfie_array = []
@@ -24,7 +25,7 @@ class CardsController < ActionController::Base
 
 
   def generate
-    @selfie = params[:username]
+    @user = Tempselfie.find_by_instagram_username(params[:username])
   end
 
   def show
