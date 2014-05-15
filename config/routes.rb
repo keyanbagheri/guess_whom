@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
 ############ CHRIS END ################
 
- 
+
     # get '/' => 'cards#index'
 
     # # Show all cards - search function?

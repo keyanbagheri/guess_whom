@@ -27,6 +27,7 @@ class CardsController < ActionController::Base
   def card_attributes
 
     params.require(:card).permit(:username, :description, :photo)
+  end
 
 end
 

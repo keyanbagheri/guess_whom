@@ -2,7 +2,7 @@ class Card < ActiveRecord::Base
 
   has_many :games, through: :cards_included_in_game
   has_one :user
-  
+
   # no attr_accessor
 
   # include Facebook
@@ -11,7 +11,7 @@ class Card < ActiveRecord::Base
 
   def return_property_when_passed_symbol(symbol_passed_in)
     case symbol_passed_in
-      
+
       when :male
       self.male()
 
@@ -47,6 +47,5 @@ class Card < ActiveRecord::Base
     end
   end
 
-  
 end
 
