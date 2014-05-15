@@ -10,18 +10,22 @@ Rails.application.routes.draw do
     # root 'cards#index'
 ########### CHRIS ROUTE EDITS #############
 
-  get '/' => "cards#index"
+  root to: 'cards#index'
 
-  get 'cards/:id' => 'cards#show'
+  get '/cards' => "cards#index"
 
-  get 'cards/new' => 'cards#new'
+  get '/cards/new' => 'cards#new'
 
+  get '/cards/generate/:username' => 'cards#generate'
 
-  get 'cards/generate/:username' => 'cards#generate'
+  post '/cards/create' => 'cards#create'
+
+  get '/cards/:id' => 'cards#show'
+
 
   get '/cards/:id/delete' => 'cards#delete'
     # get 'cards/:username'
-  
+
 
 
 ############ CHRIS END ################

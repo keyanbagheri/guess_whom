@@ -4,8 +4,8 @@
   <h3>pick a card to add to the deck</h3>
 
     <div class='card_grid'>
-          <% @selfie_array.each do |selfie| %>
-            <% @chosen_selfie %>
+          <% Tempselfie.all.each do |selfie| %>
+
             <div class='card'>
                 <a href="/cards/generate/<%= selfie.instagram_username %>"><p><img src='<%= selfie.photo_url%>'></p></a>
                 </h3><%= selfie.instagram_username %></h3>

@@ -9,10 +9,20 @@ class GamesController < ActionController::Base
 		# play()
   	end
 
-
-
-
-	
+  	def wrong_guess
+  		card_guessed = Card.find(params[:card_id])
+  		@current_game.num_of_guesses_so_far = @current_game.num_of_guesses_so_far + 1
+  		@current_game.save!
+  		if @current_game.num_of_guesses_so_far < @current_game.allowable_guesses
+  			redirect_to "/games/wrong"
+  		else
+  			if card_guessed == @current_game.winning_card_id
+  			@won_game = true
+  			else
+  			@won_game = false
+  		end
+  		redirect_to "/games/outcome"
+  	end
 
 	def play
 		# render json: @current_game.cards
