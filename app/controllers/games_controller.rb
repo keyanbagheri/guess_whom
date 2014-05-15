@@ -1,7 +1,14 @@
 class GamesController < ActionController::Base
-	def game_reset
-		#start a new game. Play
-	end
+
+	#### CREATE A NEW GAME RE-WRITE. MOVE GUTS TO MODEL
+	def reset_game
+		@current_game = Game.start_game
+  	end
+
+
+
+
+	
 
 	def play
 		#play page. reload

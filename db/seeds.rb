@@ -347,6 +347,8 @@ Card.create({
 
 
 
+
+
 current_user = User.create({
   username: 'game master',
   # facebook_username: 'maxwellrandall',
@@ -376,3 +378,5 @@ current_game.num_of_cards_in_play.times do
     card_id: Card.all.sample.id
 })
 end
+
+
