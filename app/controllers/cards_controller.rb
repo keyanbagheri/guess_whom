@@ -8,11 +8,16 @@ class CardsController < ActionController::Base
   	@cards = Card.all
   end
 
-#   get '/cards/:id' do
-#   # show me a single cards with given id
-#   card_id = params[:id]
-#   @card = Card.find(card_id)
-# end
+  def show
+    card_id = params[:id]
+    @card = Card.find(card_id)
+  end
+
+  def delete
+  	id = params[:id]
+  	Card.delete(id)
+  	redirect_to '/'
+  end
 
 # =begin ######### Copied this section to temp.rb for API work
 
