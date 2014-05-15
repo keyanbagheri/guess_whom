@@ -18,10 +18,9 @@ Rails.application.routes.draw do
 
   get '/cards/generate/:username' => 'cards#generate'
 
-  post '/cards/create' => 'cards#create'
+  post '/cards' => 'cards#create'
 
   get '/cards/:id' => 'cards#show'
-
 
   get '/cards/:id/delete' => 'cards#delete'
     # get 'cards/:username'

@@ -1,0 +1,84 @@
+<%= form_for @new_selfie do |f| %>
+  <p>
+    Are they male?
+    <%= f.text_area :gender_male, value: "false" %>
+  </p>
+  <p>
+    Are they male?
+    <%= f.text_area :gender_female value: "false"%>
+  </p>
+  <p>
+    Are they wearring glasses?
+    <%= f.text_area :accessory_eyewear_glasses value: "false"%>
+  </p>
+  <p>
+    Are they wearring a hat?
+    <%= f.text_area :clothing_hat value: "false"%>
+  </p>
+  <p>
+    Do they have facial hair?
+    <%= f.text_area :hair_facial value: "false"%>
+  </p>
+  <p>
+    Do they have a beard?
+    <%= f.text_area :hair_facial_beard value: "false"%>
+  </p>
+  <p>
+    Do they have a mustache?
+    <%= f.text_area :hair_facial_mustache value: "false"%>
+  </p>
+  <p>
+    Are they wearring jewelry?
+    <%= f.text_area :jewelry value: "false"%>
+  </p>
+  <p>
+    Are they wearring earrings?
+    <%= f.text_area :jewelry_piercing_ear value: "false"%>
+  </p>
+    <p>
+    Do they have any facial piercings?
+    <%= f.text_area :jewelry_piercing_facial value: "false"%>
+  </p>
+  <p>
+    Do they have long hair?
+    <%= f.text_area :hair_length_long value: "false" %>
+  </p>
+  <p>
+    Do they have short hair?
+    <%= f.text_area :hair_length_short value: "false" %>
+  </p>
+  <p>
+    Do they have brown hair??
+    <%= f.text_area :hair_color_brunette value: "false" %>
+  </p>
+  <p>
+    Do they have brown eyes?
+    <%= f.text_area :eye_color_brown value: "false" %>
+  </p>
+  <p>
+    Do they have blonde hair?
+    <%= f.text_area :hair_color_blonde value: "false" %>
+  </p>
+  <p>
+    Do they have red hair?
+    <%= f.text_area :hair_color_red value: "false" %>
+  </p>
+  <p>
+    Do they have black hair?
+    <%= f.text_area :hair_color_black value: "false" %>
+  </p>
+  <p>
+    Do they have green eyes?
+    <%= f.text_area :eye_color_green value: "false" %>
+  </p>
+  <p>
+    Do they have blue eyes?
+    <%= f.text_area :eye_color_blue value: "false" %>
+  </p>
+    <%= f.hidden_field :photo_url, value: photo_url %>
+  <%= f.hidden_field :instagram_username, value: instagram_username %>
+  <%= f.submit %>
+<% end %>
+
+
+
