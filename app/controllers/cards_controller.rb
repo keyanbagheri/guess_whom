@@ -29,6 +29,36 @@ class CardsController < ActionController::Base
     @new_selfie.instagram_username = user.instagram_username
   end
 
+  def create
+
+    card_attributes = params[:new_selfie]
+    Card.create({
+      instagram_username: card_attributes[:instagram_username],
+      photo_url: card_attributes[:photo_url],
+      gender_male: card_attributes[:gender_male],
+      gender_female: card_attributes[:gender_female],
+      accessory_eyewear_glasses: card_attributes[:accessory_eyewear_glasses],
+      clothing_hat: card_attributes[:clothing_hat],
+      hair_facial: card_attributes[:hair_facial],
+      hair_facial_beard: card_attributes[:hair_facial_beard],
+      hair_facial_mustache: card_attributes[:hair_facial_mustache],
+      jewelry: card_attributes[:jewelry],
+      jewelry_piercing_ear: card_attributes[:jewelry_piercing_ear],
+      jewelry_piercing_facial: card_attributes[:jewelry_piercing_facial],
+      hair_length_long: card_attributes[:hair_length_long],
+      hair_length_short: card_attributes[:hair_length_short],
+      hair_color_brunette: card_attributes[:hair_color_brunette],
+      eye_color_brown: card_attributes[:eye_color_brown],
+      hair_color_blonde: card_attributes[:hair_color_blonde],
+      hair_color_red: card_attributes[:hair_color_red],
+      hair_color_black: card_attributes[:hair_color_black],
+      eye_color_green: card_attributes[:eye_color_green],
+      eye_color_blue: card_attributes[:eye_color_blue]
+      })
+
+    redirect_to '/cards'
+  end
+
   def show
     card_id = params[:id].to_i
     @card = Card.find(card_id)
@@ -38,6 +68,14 @@ class CardsController < ActionController::Base
   	id = params[:id]
   	Card.delete(id)
   	redirect_to '/'
+  end
+
+ private
+
+  # strong params
+  def card_attributes
+    # whitelisting parts of the params hash, that are DB-safe
+    params.require(:card).permit(:instagram_username, :photo_url, )
   end
 
 end
