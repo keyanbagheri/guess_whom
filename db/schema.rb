@@ -228,10 +228,9 @@ ActiveRecord::Schema.define(version: 20140514234044) do
   end
 
   create_table "games", force: true do |t|
-    t.integer  "num_of_cards_in_play"
+    t.integer  "numb_cards_in_play"
     t.integer  "allowable_guesses"
-    t.integer  "num_of_guesses_so_far"
-    t.integer  "winning_card_id"
+    t.integer  "numb_of_guesses_so_far"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
