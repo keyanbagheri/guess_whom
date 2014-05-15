@@ -12,12 +12,15 @@ Rails.application.routes.draw do
 
   get '/' => "cards#index"
 
+  get 'cards/:id' => 'cards#show'
+
   get 'cards/new' => 'cards#new'
 
 
   get 'cards/generate/:username' => 'cards#generate'
 
-  # get 'cards/:username'
+  get '/cards/:id/delete' => 'cards#delete'
+    # get 'cards/:username'
 
 
 

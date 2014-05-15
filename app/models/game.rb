@@ -2,80 +2,44 @@ class Game < ActiveRecord::Base
 	### This is a game-record. It serves as a log of all games played. 
 	# It SHOULD also incorporates the functionality fortunately found in the game engine
 
-	## THIS STUFF IS A KLUDGE AND SHOULD BE RE-THOUGHT
-		# #   ## GAME CONFIG
+	belongs_to :user
+	has_many :cards, through: included_cards
+	
+	## GAME CONFIG
+		## THIS STUFF IS A KLUDGE AND SHOULD BE RE-THOUGHT. it might also be set in user prefernces perhaps.
+		  @@tag_questions_order = [
+		    :male,
+		    :glasses,
+		    :hat,
+		    :facial_hair,
+		    :beard,
+		    :mustache,
+		    :jewelry,
+		    :earrings,
+		    :facial_piercing,
+		    :hair_color,
+		    :eye_color]
 
-		#   @@tag_questions_order = [
-		#     :male,
-		#     :glasses,
-		#     :hat,
-		#     :facial_hair,
-		#     :beard,
-		#     :mustache,
-		#     :jewelry,
-		#     :earrings,
-		#     :facial_piercing,
-		#     :hair_color,
-		#     :eye_color]
 
+		  @@sym_to_questions_mapping = {
+		    male: "Male?",
+		    glasses: "Glasses?",
+		    hat: "Hat?",
+		    facial_hair: "Facial Hair?",
+		    beard: "Beard?",
+		    mustache: "Mustache?",
+		    jewelry: "Jewelry?",
+		    earrings: "Earrings?",
+		    facial_piercing: "Facial Piercing?",
+		    hair_color: "Hair Color?",
+		    eye_color: "Eye Color?"}
 
-		#   @@sym_to_questions_mapping = {
-		#     male: "Male?",
-		#     glasses: "Glasses?",
-		#     hat: "Hat?",
-		#     facial_hair: "Facial Hair?",
-		#     beard: "Beard?",
-		#     mustache: "Mustache?",
-		#     jewelry: "Jewelry?",
-		#     earrings: "Earrings?",
-		#     facial_piercing: "Facial Piercing?",
-		#     hair_color: "Hair Color?",
-		#     eye_color: "Eye Color?"}
-
-		#   @@number_of_cards = 9
-
-		#   @@guesses_allowed = 3
-
+		
 end
 
 
 
 # class Game_engine
-
-# #   ## GAME CONFIG
-
-#   @@tag_questions_order = [
-#     :male,
-#     :glasses,
-#     :hat,
-#     :facial_hair,
-#     :beard,
-#     :mustache,
-#     :jewelry,
-#     :earrings,
-#     :facial_piercing,
-#     :hair_color,
-#     :eye_color]
-
-
-#   @@sym_to_questions_mapping = {
-#     male: "Male?",
-#     glasses: "Glasses?",
-#     hat: "Hat?",
-#     facial_hair: "Facial Hair?",
-#     beard: "Beard?",
-#     mustache: "Mustache?",
-#     jewelry: "Jewelry?",
-#     earrings: "Earrings?",
-#     facial_piercing: "Facial Piercing?",
-#     hair_color: "Hair Color?",
-#     eye_color: "Eye Color?"}
-
-#   @@number_of_cards = 9
-
-#   @@guesses_allowed = 3
-
-
 
 
 #   ## GAME CONSTANTS
