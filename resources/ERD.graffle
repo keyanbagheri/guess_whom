@@ -6607,7 +6607,7 @@ belongs_to: card
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-05-14 21:18:34 +0000</string>
+	<string>2014-05-14 23:45:28 +0000</string>
 	<key>Modifier</key>
 	<string>John Randall</string>
 	<key>NotesVisible</key>
@@ -6702,7 +6702,7 @@ belongs_to: card
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{9, 143.5}, {892.5, 517.5}}</string>
+		<string>{{38, 141}, {892.5, 517.5}}</string>
 		<key>Zoom</key>
 		<real>2</real>
 		<key>ZoomValues</key>
