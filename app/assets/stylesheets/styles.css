@@ -18,12 +18,12 @@
 
 
 body { 
-  margin-top: 70px;
+  margin-top: 10px;
   text-align: center;
   background: white;
   background: 
-  url(../images/guess_who_logo_small.png) top left fixed no-repeat,
-  url(../images/guess_who_background.jpg) top center repeat-y;
+  url(guess_who_logo_small.png) top left fixed no-repeat,
+  url(guess_who_background.jpg) top center repeat-y;
   font-family: helvetica;
   text-shadow: 1px 1px black; 
   font-size: 20px;
